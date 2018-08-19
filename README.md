@@ -4,7 +4,7 @@
 
 ## Problem
 
-Grandma wants to store all of her family recipes, but keeps losing her old recipe book. We're bringing grandma into the digital age by building her a web app where she can keep her recipes on the web!
+Grandma wants to store all of her family recipes but keeps losing her old recipe book. We're bringing grandma into the digital age by building her a web app where she can keep her recipes on the web!
 
 ## Solution
 
@@ -18,7 +18,7 @@ Hosted on Heroku with a free dyno, it auto shuts down after 30 minutes of inacti
 
 ### Design Principles
 - API First (a separation between API and UI)
-- Mobile Friendly and easy accessible for elderly (poorly done in this iteration due to time constraints)
+- Mobile Friendly and easy-accessible for elderly (poorly done in this iteration due to time constraints)
 
 ### Backend
 
@@ -43,11 +43,11 @@ Hosted on Heroku with a free dyno, it auto shuts down after 30 minutes of inacti
 
 Although ReactJS was initially considered because
 1. slick and better user experience - Grandma likes a fancy and easy to use UI
-1. better runtime performance - Grandma hates slow internet and irresponsive UI
+1. better runtime performance - Grandma hates the slow internet and irresponsive UI
 1. separated UI layer - Not that Grandma cares, but it makes maintenance easier
-1. non-opinionated to have freedom to choose tools and technologies
+1. non-opinionated to have the freedom to choose tools and technologies
 1. easy migration to mobile apps via React Native - Grandma doesn't want to carry a laptop while cooking
-1. popularity - Grandma's other grandchildren know how to use React too and can help developing it!
+1. popularity - Grandma's other grandchildren know how to use React too and can help in developing it!
 
 but the iteration 1 of the UI is done using simple Boostrap/jQuery as a safe bet to make this prototype usable at least within the timeframe.
 
@@ -59,8 +59,8 @@ but the iteration 1 of the UI is done using simple Boostrap/jQuery as a safe bet
 
 ### Features done in iteration 1
 
-- Allow Grandma to add new receipes
-- Allow Grandma to see a list of receipes
+- Allow Grandma to add new recipes
+- Allow Grandma to see a list of recipes
 - Allow Grandma to edit an existing recipe
 - Allow Grandma to view an existing recipe
 - Allow Grandma to remove an existing recipe
@@ -72,11 +72,11 @@ but the iteration 1 of the UI is done using simple Boostrap/jQuery as a safe bet
 - UI was done using jQuery/Bootstrap (as a safe bet to complete the challenge within the challenged timeframe)
 - No field validations in all modal popups (backend validation is in place of course)
 - Ugly JavaScipt alerts for all form submission feedbacks
-- Not so much mobile friendly and easy accessible for elderly yet
+- Not so much mobile friendly and easy-accessible for elderly yet
 - Messy and duplicated JS code and modal partials
-- No Rails system tests (UI tests) added (25 RSpec unit tests were created however)
+- No Rails system tests (UI tests) added (however 25 RSpec unit tests were created)
 - The list of recipes can't be searched, sorted or paginated.
-- Steps and ingredients are currently just simple text fields. Ideally ingredients should be DB entities that can be cross-referenced by different recipes. Steps should be separated and can be re-ordered.
+- Steps and ingredients are currently just simple text fields. Ideally, ingredients should be DB entities that can be cross-referenced by different recipes. Steps should be separated and can be re-ordered.
 
 ### Future Plans (if there's additional time)
 
@@ -99,4 +99,4 @@ but the iteration 1 of the UI is done using simple Boostrap/jQuery as a safe bet
 
 #### Nice to have
 - Multi-user support (Grandpa sees this app and wants to add few of his favorite recipes too, but hopes to keep them separate from Grandma's!)
-- I18n (Grandma's distant cousin from Brazil comes to visit and would like add few special Brazilian cuisine, but couldn't understand English)
+- I18n (Grandma's distant cousin from Brazil comes to visit and would like add a few special Brazilian cuisines, but couldn't understand English)
