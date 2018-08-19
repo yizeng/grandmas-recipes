@@ -21,7 +21,7 @@ function RenderActionButtons() {
     success: function(data) {
       var recipes = data;
       var tbody = '';
-      recipes.forEach(recipe => {
+      recipes.forEach(function(recipe) {
         var tdRecipeTitle = '<td>' + recipe['title'] + '</td>';
         var recipeId = recipe['id'];
         var btnView = '<button type="button" class="btn btn-primary view-recipe" data-recipe-id="' + recipeId + '">' + 'View</button>';
