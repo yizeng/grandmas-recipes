@@ -1,0 +1,33 @@
+language: ruby
+sudo: false
+
+branches:
+  except:
+    - gh-pages
+
+cache:
+  - bundler
+
+rvm:
+  - 2.5.1
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+
+services:
+  - postgresql
+addons:
+  postgresql: "9.6"
+
+bundler_args: --without production
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - RAILS_ENV=test bundle exec bin/rails db:migrate --trace
+  - RAILS_ENV=test bundle exec bin/rails db:seed
+
+script:
+  - bundle exec rspec spec --color --format documentation --require spec_helper --require rails_helper
+
