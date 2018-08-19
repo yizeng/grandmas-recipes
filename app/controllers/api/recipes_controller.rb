@@ -1,6 +1,7 @@
 module Api
   class RecipesController < ApiController
     before_action :set_recipe, only: %i[show update destroy]
+    skip_before_action :verify_authenticity_token
 
     def index
       @recipes = Recipe.all
@@ -17,7 +18,7 @@ module Api
     end
 
     def update
-      @recipe.update(recipe_params)
+      @recipe.update!(recipe_params)
       head :no_content
     end
 
