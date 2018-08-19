@@ -29,5 +29,5 @@ before_script:
   - RAILS_ENV=test bundle exec bin/rails db:seed
 
 script:
-  - rspec spec
+  - bundle exec rspec spec --color --format documentation --require spec_helper --require rails_helper
 
